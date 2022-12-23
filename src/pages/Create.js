@@ -61,11 +61,15 @@ const Create = () => {
         }
         }}>등록</button> :
         <button onClick={() => {
+        if(article.title !== "" && article.author !== "" && article.content !== "" ){
           axios.patch(`/odata/v4/BoardService/Board(${id})`, article)
           .then(function (response){
             alert('수정되었습니다.')
             navigate('/')
           }) 
+        } else {
+          alert('내용을 입력해주세요')
+        }
         }}>수정</button>}
         </div>
     )
