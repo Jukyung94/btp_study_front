@@ -52,7 +52,7 @@ const Create = () => {
         if(article.title !== null && article.author !== null && article.content != null ){
           axios.post('/odata/v4/BoardService/Board', article)
           .then(function (response) {
-              alert('등록되었습니다')
+              alert('등록되었습니다.')
               navigate("/")
             })
             .catch(function (err) {console.log(err)})
