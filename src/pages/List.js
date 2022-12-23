@@ -44,7 +44,10 @@ const List = () => {
           ))}
         </tbody>
       </table>
-      <Link to="/create"><button>글쓰기</button></Link>    
+      <Link to="/create"><button>글쓰기</button></Link>
+      <div>
+        <Link to="/uploadIMG"><button>이미지 업로드</button></Link>    
+      </div>
       </>
       )}
     </div>
