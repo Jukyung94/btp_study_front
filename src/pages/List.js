@@ -4,10 +4,19 @@ import { Link, useNavigate } from 'react-router-dom';
 const List = () => {
   const [data, setData] = useState([]);
   const navigate = useNavigate();
+  const [aa, setAa] = useState();
   
   useEffect(() => {
-    fetchData()    
+    fetchData();
+    creatBlob();
   }, [])
+
+  const creatBlob = () => {
+    const obj = {hello: 'world'};
+    const blob = new Blob([JSON.stringify(obj, null, 2)], {type: 'application/json'});
+    console.log(blob.arrayBuffer())
+    console.log(blob.length)
+  }
 
   
 
@@ -44,7 +53,11 @@ const List = () => {
           ))}
         </tbody>
       </table>
-      <Link to="/create"><button>글쓰기</button></Link>    
+      <Link to="/create"><button>글쓰기</button></Link>
+      <div>
+        <Link to="/uploadIMG"><button>이미지 업로드</button></Link>    
+      </div>
+      
       </>
       )}
     </div>
