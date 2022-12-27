@@ -69,7 +69,8 @@ function ImageUploader() {
         setFile({
           imgName: 'title',
           image: event.target.files[0]
-        })}}/>
+        })        
+        }}/>
       <button onClick={() => UploadImage()}>Upload</button>
       <ImageViewer />
       <div>
