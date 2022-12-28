@@ -33,11 +33,11 @@ const Read = () => {
       <p>글쓴이</p>
       <p>{read.author}</p>
       <p>내용</p>
-      <p>{read.content}</p>
+      <div>{read.content}</div>
       
       <button onClick={() => navigate(-1)}>목록으로 돌아가기</button>
       <button onClick={() => deleteArticle(id)}>삭제</button>
-      <button onClick={() => navigate('/create', { state: {id : id}})}>수정</button>
+      <button onClick={() => navigate('/create', { state: {id : id, title: read.title, author: read.author, content: read.content}})}>수정</button>
       </div>
     }
     </div>
