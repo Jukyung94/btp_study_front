@@ -11,7 +11,7 @@ function ImageViewer() {
   const fetchData = () => {
     axios.get('/odata/v4/BoardService/ImageSource')
     .then(response => {
-      setView(response.data.value[0].image)
+      setView(response.data.value[1].image)
         // const myFile = new File([response.data.value[2].image], 'testImage')
         // const reader = new FileReader()
         // reader.onload = ev =>{

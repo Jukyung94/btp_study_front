@@ -30,7 +30,7 @@ const List = () => {
   }
   return(
     <div>
-    {data.length > 0 && (
+    {data.length > 0 ? (
       <>
       <table>
         <thead>
@@ -54,8 +54,13 @@ const List = () => {
       <div>
       <button onClick={() => {navigate("/uploadIMG")}}>이미지 업로드</button>
       </div>
-      
       </>
+      ) : (
+        <div>
+          <p>등록된 글이 없습니다</p>
+          <button onClick={() => {navigate('/create')}}>글쓰기</button>
+          <button onClick={() => {navigate("/uploadIMG")}}>이미지 업로드</button>
+        </div>
       )}
     </div>
   )
