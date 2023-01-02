@@ -24,7 +24,7 @@ function ImageViewer() {
 
   return(
     <div>
-        aaaaa
+        aaaaabbb
         <img src={view} style={{width: "300px", height: "300px"}}/>
     </div>
   )
