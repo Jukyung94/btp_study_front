@@ -31,6 +31,7 @@ const Create = () => {
   // }, [])
   
   return (
+    <>
     <div className='container'>
       <div className='title'>
         제목
@@ -52,7 +53,8 @@ const Create = () => {
       </div>
       <div className='content'>
         <span style={{marginBottom: 2}}>내용</span>
-        <textarea 
+        <textarea
+          style={{marginBottom: 10}}
           value={article.content ? article.content : ""}
           onChange={(value) => {setArticle({...article, content: value.target.value})}}
           />
@@ -82,6 +84,8 @@ const Create = () => {
         }
         }}>수정</button>}
     </div>
+        <button onClick={() => {navigate('/')}}>돌아가기</button>
+    </>
   )
 }
 
